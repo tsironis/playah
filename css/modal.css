@@ -1,0 +1,189 @@
+.modal {
+    background-clip: padding-box;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    left: 50%;
+    margin: -250px 0 0 -280px;
+    overflow: auto;
+    position: fixed;
+    top: 50%;
+    width: 560px;
+    z-index: 1050;
+    font-family: 'Segoe UI',Arial,FreeSans,sans-serif;
+}
+
+.modal-header {
+    border-bottom: 1px solid #EEEEEE;
+    padding: 9px 15px;
+}
+
+.modal-header .close {
+    margin-top: 2px;
+}
+button.close {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    padding: 0;
+}
+.close {
+    color: #000000;
+    float: right;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    opacity: 0.2;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+input, button, select, textarea {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+label, input, button, select, textarea {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+}
+button, input {
+    line-height: normal;
+}
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: middle;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 27px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    font-family: inherit;
+    font-weight: 700;
+    margin: 0;
+    text-rendering: optimizelegibility;
+}
+
+.modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.modal-footer:before, .modal-footer:after {
+    content: "";
+    display: table;
+}
+.modal-footer {
+    background-color: #F5F5F5;
+    border-radius: 0 0 6px 6px;
+    border-top: 1px solid #DDDDDD;
+    box-shadow: 0 1px 0 #FFFFFF inset;
+    margin-bottom: 0;
+    padding: 14px 15px 15px;
+    text-align: right;
+}
+
+.btn:first-child {
+}
+.btn {
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+.btn {
+    display: inline-block;
+  *display: inline;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 13px;
+  line-height: 18px;
+  *line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.modal a {
+    color: #0088CC;
+    padding-bottom: 7px;
+}
+
+.modal-footer a {
+    text-decoration: none;
+}
+
+.modal-backdrop, .modal-backdrop.fade.in {
+    opacity: 0.8;
+}
+.modal-backdrop.fade {
+    opacity: 0;
+}
+.fade.in {
+    opacity: 1;
+}
+.modal-backdrop, .modal-backdrop.fade.in {
+    opacity: 0.6;
+}
+.modal-backdrop {
+    background-color: #000000;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1040;
+}
+.fade {
+    -webkit-transition: opacity 0.15s linear;
+     -moz-transition: opacity 0.15s linear;
+      -ms-transition: opacity 0.15s linear;
+       -o-transition: opacity 0.15s linear;
+          transition: opacity 0.15s linear;
+    opacity: 0
+}
+.modal-body ul:first-child {
+    float:left;
+}
+.modal-body ul:last-child {
+    float:right;
+    margin-right: 100px;
+}
+ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+ul .btn {
+    cursor: default;
+    border-bottom: 2px solid #aaa;
+    width: 30px;
+}

@@ -1,0 +1,50 @@
+/*----- Mixins -----*/
+.rounded-corners(@radius) { /* borders rounder with certain radius */
+           -moz-border-radius: @radius;
+        -webkit-border-radius: @radius;
+                border-radius: @radius; /* future proofing */
+         -khtml-border-radius: @radius; /* for old Konqueror browsers */
+}
+.inner-shadow(@radius, @color) { /* inner shadows for boxes */
+           -moz-box-shadow: inset 0 0 @radius @color;
+    -webkit-box-shadow: inset 0 0 @radius @color;
+            box-shadow: inset 0 0 @radius @color;
+}
+.text-shadow(@x, @y, @blur, @color) {
+        text-shadow: @x @y @blur @color;
+}
+.ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+}
+.border-box {
+        -webkit-box-sizing: border-box; 
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+.transition(@time){
+        -webkit-transition: all @time ease-in-out;
+        -moz-transition: all @time ease-in-out;
+        -o-transition: all @time ease-in-out;
+        -ms-transition: all @time ease-in-out;
+        transition: all @time ease-in-out;
+}
+.yanone(@size) {
+        font-family: 'YanoneKaffeesatzRegular', Arial, FreeSans, sans-serif;
+        font-size: @size;
+}
+.segoeui(@size, @weight) { /* Segoe WP mixin implemantation */
+        font-family: 'Segoe UI', Arial, FreeSans, sans-serif;
+        font-size: @size;
+        font-weight: @weight;
+}
+.segoewp(@size) { /* Segoe WP mixin implemantation */
+        font-family: 'SegoeWPLight', Arial, FreeSans, sans-serif;
+        font-size: @size;
+        font-weight: lighter;
+}
+.bebas(@size) { /* Bebas mixin implemantation */
+        font-family: BebasNeue, Arial, FreeSans, sans-serif;
+        font-size: @size;
+}

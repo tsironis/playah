@@ -1,0 +1,50 @@
+/*----- Icon fonts -----*/
+[data-icon]:before {
+	font-family: 'Iconic';
+	content: attr(data-icon);
+	display: inline-block;
+	speak: none;
+}
+.screen-reader-text {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+#prev {
+	[data-icon]:before {
+		margin-top: 8px;
+		margin-right: 2px;
+		.text-shadow(1px, 1px, 2px, #333);
+	}
+}
+#next {
+	[data-icon]:before {
+		margin-top: 8px;
+		margin-left: 2px;
+		.text-shadow(1px, 1px, 2px, #333);
+	}
+}
+#play {
+	[data-icon]:before {
+		margin-top: 11px;
+		margin-left: 6px;
+		.text-shadow(1px, 1px, 2px, #333);
+	}
+}
+#pause {
+	[data-icon]:before {
+		margin-top: 11px;
+		margin-left: 1px;
+		.text-shadow(1px, 1px, 2px, #333);
+	}
+}
+#vol, #mute {
+	[data-icon]:before {
+		margin-left: 15px;
+		.text-shadow(1px, 1px, 2px, #333);
+	}
+}
+.on {
+	color: #333 !important;
+	text-shadow: 0 1px 2px #fff !important;
+}

@@ -1,0 +1,470 @@
+/*---- Custom Fonts -----*/
+/*---- Custom Fonts -----*/
+/* Yanone */
+@font-face {
+  font-family: 'YanoneKaffeesatzRegular';
+  src: url('../fonts/yanone/YanoneKaffeesatz-Regular-webfont.eot');
+  src: url('../fonts/yanone/YanoneKaffeesatz-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/yanone/YanoneKaffeesatz-Regular-webfont.woff') format('woff'), url('../fonts/yanone/YanoneKaffeesatz-Regular-webfont.ttf') format('truetype'), url('../fonts/yanone/YanoneKaffeesatz-Regular-webfont.svg#YanoneKaffeesatzBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Bebas */
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../fonts/bebas/BebasNeue-webfont.eot');
+  src: url('../fonts/bebas/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/bebas/BebasNeue-webfont.woff') format('woff'), url('../fonts/bebas/BebasNeue-webfont.ttf') format('truetype'), url('../fonts/bebas/BebasNeue-webfont.svg#CuprumFFURegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Segoe WP */
+@font-face {
+  font-family: SegoeWPLight;
+  src: url("../fonts/segoewp/SegoeWP-Light.ttf");
+}
+/* Entypo icon font */
+@font-face {
+  font-family: 'Iconic';
+  src: url('../fonts/iconic/Iconic.eot');
+  src: url('../fonts/iconic/Iconic.eot?#iefix') format('embedded-opentype'), url('../fonts/iconic/Iconic.svg#Iconic') format('svg'), url('../fonts/iconic/Iconic.woff') format('woff'), url('../fonts/iconic/Iconic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*----- Mixins -----*/
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*----- Variables -----*/
+/* Colors */
+/*Sizes*/
+/*----- Icon fonts -----*/
+[data-icon]:before {
+  font-family: 'Iconic';
+  content: attr(data-icon);
+  display: inline-block;
+  speak: none;
+}
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+#prev [data-icon]:before {
+  margin-top: 8px;
+  margin-right: 2px;
+  text-shadow: 1px 1px 2px #333333;
+}
+#next [data-icon]:before {
+  margin-top: 8px;
+  margin-left: 2px;
+  text-shadow: 1px 1px 2px #333333;
+}
+#play [data-icon]:before {
+  margin-top: 11px;
+  margin-left: 6px;
+  text-shadow: 1px 1px 2px #333333;
+}
+#pause [data-icon]:before {
+  margin-top: 11px;
+  margin-left: 1px;
+  text-shadow: 1px 1px 2px #333333;
+}
+#vol [data-icon]:before,
+#mute [data-icon]:before {
+  margin-left: 15px;
+  text-shadow: 1px 1px 2px #333333;
+}
+.on {
+  color: #333 !important;
+  text-shadow: 0 1px 2px #fff !important;
+}
+/*----- Basic Styles -----*/
+::selection {
+  background: transparent;
+}
+::-moz-selection {
+  background: transparent;
+}
+body {
+  background: url('../img/bg-grain.png');
+}
+#main {
+  width: 700px;
+  margin: 0 auto;
+}
+#main header {
+  text-align: center;
+  cursor: default;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+#main header h1 {
+  font-family: 'YanoneKaffeesatzRegular', Arial, FreeSans, sans-serif;
+  font-size: 90px;
+  color: #f9943c;
+  letter-spacing: 5px;
+  margin: 25px;
+  -webkit-text-stroke: 0.35px;
+  text-shadow: 0px 0px 1px #494949;
+}
+#main header h3 {
+  /* Bebas mixin implemantation */
+
+  font-family: BebasNeue, Arial, FreeSans, sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+  color: #386d8e;
+}
+footer {
+  width: 80px;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+footer a {
+  text-decoration: none;
+}
+#player {
+  width: 100%;
+  background: #0d7b9e;
+  position: relative;
+}
+/*----- Controls & buttons ------*/
+#controls {
+  color: #fff;
+  width: 350px;
+  position: relative;
+  /* Buttons styles */
+
+}
+#controls:hover > #buttons {
+  opacity: 1;
+}
+#controls:hover > .gradient {
+  opacity: 0.7;
+}
+#controls img.artwork {
+  border-bottom: 1px solid #999;
+  width: 100%;
+}
+#controls .gradient {
+  opacity: 0;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0)), to(#494949));
+  background: -moz-linear-gradient(19% 100% 90deg, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0) 100%);
+  background: -ms-linear-gradient(19% 100% 90deg, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(19% 100% 90deg, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0) 100%);
+  height: 125px;
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#controls #buttons {
+  opacity: 0;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+#controls #buttons .button {
+  display: inline-block;
+  vertical-align: middle;
+  /* borders rounder with certain radius */
+
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  /* future proofing */
+
+  -khtml-border-radius: 50%;
+  /* for old Konqueror browsers */
+
+  cursor: pointer;
+  text-align: center;
+}
+#controls #buttons .small {
+  width: 35px;
+  height: 35px;
+  font-size: 15px;
+}
+#controls #buttons .big {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #fff;
+  margin: 3px;
+  font-size: 20px;
+}
+#controls #buttons #duration {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 15px;
+  width: 87px;
+  /* Segoe WP mixin implemantation */
+
+  font-family: 'SegoeWPLight', Arial, FreeSans, sans-serif;
+  font-size: 24px;
+  font-weight: lighter;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#controls #buttons #control-center {
+  display: inline-block;
+  width: 175px;
+  text-align: center;
+}
+#controls #buttons #vol,
+#controls #buttons #mute {
+  font-size: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 80px;
+  text-align: right;
+  padding-right: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#controls #buttons #vol:hover,
+#controls #buttons #mute:hover {
+  text-shadow: 1px 1px 2px #7e7e7e;
+}
+#controls #buttons #vol-container {
+  display: none;
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  width: 40px;
+  height: 100px;
+  background: #0d7b9e;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#controls #buttons #vol-slider input[type="range"] {
+  width: 75px;
+  margin-left: -17px;
+  margin-top: 40px;
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+#controls #buttons .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #E2E3E7;
+  position: absolute;
+  top: 255px;
+  left: 565px;
+}
+#controls #buttons #vol:hover > #vol-slider,
+#controls #buttons #vol:hover > .arrow-down {
+  display: block;
+}
+#controls #seek input[type="range"] {
+  -webkit-appearance: none;
+  border: 1px solid black;
+  display: block;
+  width: 95%;
+  margin-top: 5px;
+  margin-left: 2.5%;
+  height: 5px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #242323;
+  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.6);
+}
+#controls #seek input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #333;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #80e4df;
+  /* Old browsers */
+
+  background: -webkit-linear-gradient(top, #80e4df 0%, #75dbd6 13%, #5ec4bf 33%, #57bbb6 47%, #419d99 80%, #378f8b 100%);
+  background: -moz-linear-gradient(top, #80e4df 0%, #75dbd6 13%, #5ec4bf 33%, #57bbb6 47%, #419d99 80%, #378f8b 100%);
+  background: -o-linear-gradient(top, #80e4df 0%, #75dbd6 13%, #5ec4bf 33%, #57bbb6 47%, #419d99 80%, #378f8b 100%);
+  background: linear-gradient(top, #80e4df 0%, #75dbd6 13%, #5ec4bf 33%, #57bbb6 47%, #419d99 80%, #378f8b 100%);
+  /* W3C */
+
+}
+/* Track info styles */
+#info {
+  display: inline-block;
+  width: 350px;
+  cursor: default;
+}
+#info #metadata {
+  -webkit-text-stroke: 0.35px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+#info #metadata #title {
+  font-size: 28px;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Segoe WP mixin implemantation */
+
+  font-family: 'SegoeWPLight', Arial, FreeSans, sans-serif;
+  font-size: 24px;
+  font-weight: lighter;
+}
+#info #metadata #artist {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Segoe WP mixin implemantation */
+
+  font-family: 'Segoe UI', Arial, FreeSans, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#info #metadata #album {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Segoe WP mixin implemantation */
+
+  font-family: 'Segoe UI', Arial, FreeSans, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+#info #play-pref {
+  float: right;
+}
+#info #play-pref #repeat,
+#info #play-pref #shuffle {
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  margin-top: 8px;
+  margin-right: 10px;
+  cursor: pointer;
+  text-shadow: 0px 1px 1px #333333;
+}
+/* Styles for the playlist (bottom) part */
+#playlist {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#playlist #song-list {
+  display: inline-block;
+  width: 350px;
+}
+#playlist #song-list ul {
+  height: 400px;
+  overflow: hidden;
+  /* Segoe WP mixin implemantation */
+
+  font-family: 'SegoeWPLight', Arial, FreeSans, sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  -webkit-text-stroke: 0.35px;
+  margin-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#playlist #song-list ul li {
+  list-style-type: none;
+  cursor: pointer;
+  line-height: 1.5em;
+  color: #fff;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#playlist #song-list ul li:hover {
+  background: #0d9dca;
+}
+#playlist #song-list ul li span {
+  display: inline-block;
+  vertical-align: top;
+}
+#playlist #song-list ul li .track-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+#playlist #song-list ul li .track-artist {
+  text-transform: uppercase;
+  /* Segoe WP mixin implemantation */
+
+  font-family: 'Segoe UI', Arial, FreeSans, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+.overflow {
+  overflow-y: auto !important;
+}
+.currently-playing {
+  background: #0d8fb7 !important;
+}
+#message {
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 200px;
+  width: 100%;
+}
+#message h3 {
+  /* Segoe WP mixin implemantation */
+
+  font-family: 'SegoeWPLight', Arial, FreeSans, sans-serif;
+  font-size: 50px;
+  font-weight: lighter;
+  position: relative;
+  color: #494949;
+  top: 130px;
+}
+.twitter-follow-button {
+  margin-top: 10px;
+}
+/* Hacks */
+@-moz-document url-prefix() {
+  #seek input[type="range"] {
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+}

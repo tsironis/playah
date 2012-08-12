@@ -2,7 +2,6 @@
 	"album": "Beatz & Pieces Vol.1", "artist":"Gramatik",
 	"songs": 
 	[
-		{ "title": "Trains", "album": "In Absentia", "artist":"Porcupine Tree", "track": 2, "duration":"05:56", "src":"music/trains.ogg", "artwork": "img/artworks/absentia.png"},
 		{ "title": "DreamBIG", "album": "Beatz & Pieces Vol.1", "artist":"Gramatik", "track": 1, "duration":"05:03", "src":"music/dreambig.ogg", "artwork": "img/artworks/beatz.jpg"},
 		{ "title": "Just Jammin'", "album": "Street Bangerz Vol.2", "artist":"Gramatik", "track": 10, "duration":"05:47", "src":"music/justjammin.ogg", "artwork": "img/artworks/bangerz.jpg"},
 		{ "title": "So much for Love", "album": "Beatz & Pieces Vol.1", "artist":"Gramatik","track": 4, "duration":"05:34", "src":"music/somuchforlove.ogg", "artwork": "img/artworks/beatz.jpg"},

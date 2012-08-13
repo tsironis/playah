@@ -2,6 +2,8 @@ Playo is an interactive HTML5 player that focuses in the really efficient new fe
 
 Also, it is built with the latest web technologies and practices in mind, such as CSS3 and LESS, the CSS preprocessor. Furthermore, I used some fairly new aspects of HTML, such as `data-elements` and of course the `audio` HTML5 tag which is automatically associated with the audio API of the supported browser.
 
+** Everything you need to know about this project, how it works and how it was developed, you can propably find it in the ridiculously long wiki.** See the links below.
+
 ## Wiki Pages
 1. [Home](https://github.com/tsironis/playah/wiki/) - Homepage of the wiki
 2. [Tech stuff](https://github.com/tsironis/playah/wiki/Tech-stuff) - technical description for the technologies used

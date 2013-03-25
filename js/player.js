@@ -17,7 +17,7 @@ $(document).ready(function(){ //the script below will be run when the whole DOM 
 			var paused = true;
 
 	/*--- JSON init and loading data ---*/
-	$.getJSON("music/album.js",function(album){ // JSON file is loaded and then, the following happen
+	$.getJSON("playah/music/album.js",function(album){ // JSON file is loaded and then, the following happen
 		data = album; // all the JSON data are stored inthe global variable "data"
 		$.each(album.songs, function(i,song) { // for each object in the JSON file we'll...
 			var dataMarkup =
